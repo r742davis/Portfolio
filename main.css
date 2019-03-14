@@ -7,11 +7,11 @@
 
 body {
   font-family: 'PT Sans Narrow', sans-serif;
-  background: #333;
   color: white;
+  background: #333;
   line-height: 2.0;
   height: 100vh;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 h1 {
@@ -20,19 +20,13 @@ h1 {
   animation-delay: 0.5s;
 }
 
-hr {
-  color: white;
-  z-index: 1;
-  width: 500px;
-}
-
 .container {
   width: 100%;
   height: 100%;
   /* CSS Smooth Scroll */
-  /* overflow-y: scroll;
+  overflow-y: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory; */
+  scroll-snap-type: y mandatory;
 }
 
 .navbar {
@@ -63,6 +57,7 @@ hr {
 .navbar ul li a {
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 1em;
   color: #f4f4f4;
   transition: 0.25s;
 }
@@ -92,6 +87,12 @@ section p {
   font-size: 1.5rem;
 }
 
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
 /* Section Images */
 section#home {
   background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;
@@ -101,12 +102,20 @@ section#about {
   background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;
 }
 
+section#projects {
+  background: url('https://blogs.lse.ac.uk/management/files/2017/07/pexels-photo-160107.jpeg') no-repeat center center/cover;
+}
+
 section#service {
   background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;
 }
 
+section#writing {
+  background: url('https://studybreaks.com/wp-content/uploads/2017/11/write.jpg') no-repeat center center/cover;
+}
+
 section#contact {
-  background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;
+  background: url('zeus_in_snow.jpeg') no-repeat center center/cover;
 }
 
 
