@@ -179,11 +179,18 @@ footer {
 .projects-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0;
+  justify-content: space-between;
+  margin: 25px;
+}
+.card {
+  margin: 50px;
 }
 .card-title {
   color: #313131;
+}
+.card-image {
+  width: 200px;
+  height: 200px;
 }
 
 
