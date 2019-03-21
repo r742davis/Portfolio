@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script|Over+the+Rainbow|PT+Sans+Narrow');
 
 * {
   margin: 0;
@@ -15,6 +15,7 @@ body {
 }
 
 h1 {
+  font-family: 'Over the Rainbow', cursive;
   opacity: 0;
   animation: fade-in-up ease 1.0s forwards;
   animation-delay: 0.5s;
@@ -47,7 +48,7 @@ h1 {
   justify-content: center;
   opacity: 0;
   animation: fade-in-right ease 1.0s forwards;
-  animation-delay: 0.5s;
+  animation-delay: 1.0s;
 }
 
 .navbar ul li {
@@ -72,7 +73,7 @@ h1 {
 section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   text-align: center;
   width: 100%;
@@ -81,13 +82,14 @@ section {
 }
 
 section h1 {
-  font-size: 4rem;
-  margin-left: 100px;
+  font-size: 5rem;
 }
 
-section p, h4 {
+section h4 {
   font-size: 1.5rem;
-  margin-left: 100px;
+  opacity: 0;
+  animation: fade-in-up ease 1.0s forwards;
+  animation-delay: 0.5s;
 }
 
 .overlay {
@@ -119,7 +121,33 @@ section#writing {
 
 section#contact {
   background: whitesmoke;
-  color: #d9d9d9;
+  color: #313131;
+}
+
+.title-pic {
+  border-radius: 10em;
+  border: 4px solid whitesmoke;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*** About ***/
+.about {
+  color: #313131;
+}
+.about-container {
+
+}
+
+.about-container p {
+  width: 75vh;
+  height: auto;
+  padding: 2em;
+  background: whitesmoke;
+  opacity: 0.8;
+  border-radius: 1em;
+  color: black;
 }
 
 /*** Footer ***/
@@ -128,11 +156,34 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 70px;
   background: rgba(0,0,0,0.9);
   color: whitesmoke;
+}
+.footer-links {
   display: flex;
   justify-content: center;
+}
+.footer-links h3 {
+  margin: 20px;
+  font-size: 24px;
+}
+.footer-links a {
+  color: white;
+}
+.footer-links a:hover {
+  color: steelblue;
+}
+
+/*** Projects ***/
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.card-title {
+  color: #313131;
 }
 
 
