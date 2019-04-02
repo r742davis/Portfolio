@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Marck+Script|Over+the+Rainbow|PT+Sans+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script|Over+the+Rainbow|PT+Sans+Narrow|Reenie+Beanie');
 
 * {
   margin: 0;
@@ -7,15 +7,16 @@
 
 body {
   font-family: 'PT Sans Narrow', sans-serif;
-  color: white;
+  color: black;
   background: #333;
   line-height: 2.0;
   height: 100vh;
   overflow: hidden;
 }
 
-h1 {
-  font-family: 'Over the Rainbow', cursive;
+#home h1 {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 200px;
   opacity: 0;
   animation: fade-in-up ease 1.0s forwards;
   animation-delay: 0.5s;
@@ -30,7 +31,9 @@ h1 {
   scroll-snap-type: y mandatory;
 }
 
+/**********************/
 /*** Navigation Bar ***/
+/**********************/
 .navbar {
   position: fixed;
   top: 0;
@@ -69,7 +72,9 @@ h1 {
   transition: 0.25s;
 }
 
+/****************/
 /*** Sections ***/
+/****************/
 section {
   display: flex;
   flex-direction: column;
@@ -98,30 +103,11 @@ section h4 {
   background: rgba(0, 0, 0, 0.8);
 }
 
-/* Section Images */
+/*****************/
+/*** Home Page ***/
+/*****************/
 section#home {
-  background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;
-}
-
-section#about {
-  background: url('https://s2.best-wallpaper.net/wallpaper/2880x1800/1708/Abstract-watercolor-background-spots-rainbow-colors_2880x1800.jpg') no-repeat center center/cover;
-}
-
-section#projects {
-  background: url('https://blogs.lse.ac.uk/management/files/2017/07/pexels-photo-160107.jpeg') no-repeat center center/cover;
-}
-
-section#service {
-  background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;
-}
-
-section#writing {
-  background: url('https://studybreaks.com/wp-content/uploads/2017/11/write.jpg') no-repeat center center/cover;
-}
-
-section#contact {
-  background: whitesmoke;
-  color: #313131;
+  background: url('./images/cherry-desk.jpg') no-repeat center center/cover;
 }
 
 .title-pic {
@@ -132,12 +118,11 @@ section#contact {
   margin-right: auto;
 }
 
-/*** About ***/
+/******************/
+/*** About Page ***/
+/******************/
 .about {
   color: #313131;
-}
-.about-container {
-
 }
 
 .about-container p {
@@ -149,33 +134,17 @@ section#contact {
   border-radius: 1em;
   color: black;
 }
-
-/*** Footer ***/
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  background: rgba(0,0,0,0.9);
-  color: whitesmoke;
+/*********************/
+/*** Projects Page ***/
+/*********************/
+section#projects {
+  background: url('./images/good-day.jpg') no-repeat center center/cover;
 }
-.footer-links {
-  display: flex;
-  justify-content: center;
-}
-.footer-links h3 {
-  margin: 20px;
-  font-size: 24px;
-}
-.footer-links a {
+#projects h1 {
+  font-family: 'PT Sans Narrow', cursive;
   color: white;
+  margin-bottom: 100px;
 }
-.footer-links a:hover {
-  color: steelblue;
-}
-
-/*** Projects ***/
 .projects-container {
   display: flex;
   align-items: center;
@@ -192,9 +161,69 @@ footer {
   width: 200px;
   height: 200px;
 }
-
-
-/* Key Frames and Animations */
+/********************/
+/*** Contact Page ***/
+/********************/
+#contact h1 {
+  color: white;
+  font-size: 5em;
+}
+section#contact {
+  background: url('./images/color-computer.jpg') no-repeat center;
+  background-size: 120%;
+  align-items: center;
+  justify-content: space-between;
+}
+#contact h1 {
+  margin-top: 150px;
+}
+#contact i {
+  margin-bottom: 200px;
+  color: white;
+  font-size: 4em;
+  transition: 0.2s;
+}
+#contact i:hover {
+  color: steelblue;
+  transition: 0.2s;
+}
+.contact-icons-container {
+  display: flex;
+}
+.contact-icons-container a {
+  margin: 20px;
+}
+/**************/
+/*** Footer ***/
+/**************/
+/* footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0,0,0,0.9);
+  color: whitesmoke;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+.footer-links h3 {
+  font-size: 24px;
+}
+.footer-links a {
+  color: white;
+  font-size: 1.5em;
+}
+.footer-links a:hover {
+  color: steelblue;
+} */
+/******************/
+/*** Animations ***/
+/******************/
 @keyframes fade-in-right {
   from {
     opacity: 0;
@@ -205,7 +234,6 @@ footer {
     transform: translateX(0);
   }
 }
-
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -214,14 +242,5 @@ footer {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes grow-left {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
   }
 }
